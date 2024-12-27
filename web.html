@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+     <script type="text/javascript">
+        function changeValues() {
+          let var1 = document.getElementsByName("login");
+          let var2 = document.getElementsByName("age");
+
+          let tempVar = var1[0].value;
+          let tempType = var1[0].type;
+          console.log(tempType);
+
+          var1[0].type = var2[0].type;
+          var1[0].value = var2[0].value;
+
+          var2[0].type = tempType;
+          var2[0].value = tempVar;
+
+
+        }
+
+     </script>
+     <label>Login:</label>
+     <input type="text" name="login"> 
+     <input type="text" name="login"> 
+     <label>Age:</label>
+     <input type="number" name="age">
+
+     <button onclick="changeValues()">Change Values</button>
+</body>
+
+</html>
